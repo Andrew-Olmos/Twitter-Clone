@@ -14,13 +14,14 @@ class HomeTableViewController: UITableViewController {
     var numOfTweets: Int!
 
     override func viewDidLoad() {
-        loadTweet()
         super.viewDidLoad()
+        print("1")
+        loadTweet()
     }
     
     
     func loadTweet(){
-        let myURL = "https://api.twitter.com/1.1/statuses/user_timeline.json"
+        let myURL = "https://api.twitter.com/1.1/statuses/home_timeline.json"
         let myParams = ["count": 10]
         
         TwitterAPICaller.client?.getDictionariesRequest(url: myURL, parameters: myParams, success:
@@ -31,11 +32,11 @@ class HomeTableViewController: UITableViewController {
             for tweet in tweets {
                 self.tweetArray.append(tweet)
             }
-            
+            print(self.tweetArray)
             self.tableView.reloadData()
             
         }, failure: { (Error) in
-            print("Could not retrieve tweet")
+            print("Could not retrieve tweet\(Error)")
         })
     }
     
