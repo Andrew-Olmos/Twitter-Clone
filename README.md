@@ -27,6 +27,8 @@ Here's a walkthrough of implemented user stories:
 
 ![](https://i.imgur.com/a/yCSJIhT.gif)
 
+For some reason the gif does not show so here's the link to it --> https://imgur.com/a/yCSJIhT
+
 
 **Twitter Clone** is a basic twitter app to read your tweets.
 
